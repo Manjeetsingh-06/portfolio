@@ -39,7 +39,7 @@ p, ul { margin-bottom: 20px; }
     text-shadow: none;
 }
 .bg-image {
-    background: url('profile.jpeg') no-repeat center center/cover; 
+    background: url('image.png') no-repeat center center/cover; 
     position: absolute;
     top: 0;
     left: 0;
@@ -110,7 +110,7 @@ nav ul li a:hover {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: url('profile.jpeg') no-repeat center center/cover; 
+    background: url('image.png') no-repeat center center/cover;
     margin: 0 auto 20px auto; 
     position: relative;
     transition: transform 0.3s;
