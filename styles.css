@@ -1,0 +1,223 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.dark { background-color: #000; color: #fff; }
+.light { background-color: #fff; color: #000; }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+section {
+    padding: 100px 0;
+    min-height: 100vh;
+    position: relative;
+}
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #00ffff;
+}
+p, ul { margin-bottom: 20px; }
+.neon {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+.light .neon {
+    color: #000;
+    text-shadow: none;
+}
+.bg-image {
+    background: url('profile.jpeg') no-repeat center center/cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.5;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    padding: 10px 0;
+}
+.light nav {
+    background: rgba(255, 255, 255, 0.8);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.light nav ul li a {
+    color: #000;
+}
+nav ul li a:hover {
+    color: #00ffff;
+}
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #000, #111);
+}
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url('profile.jpeg') no-repeat center center/cover; 
+    margin: 0 auto 20px auto; 
+    position: relative;
+    transition: transform 0.3s;
+}
+.profile-photo:hover {
+    transform: scale(1.1);
+}
+.profile-photo::after {
+    content: "Keep Coding! 🚀";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00ffff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.profile-photo:hover::after {
+    opacity: 1;
+}
+.links {
+    margin: 10px 0;
+}
+.links a {
+    margin: 0 10px;
+    color: #00ffff;
+    text-decoration: none;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    animation: slideIn 1s ease-out;
+    animation-play-state: paused;
+}
+.project:hover {
+    transform: rotateY(10deg);
+}
+.project img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #00ffff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn {
+    display: inline-block;
+    background: #00ffff;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+.btn:hover {
+    background: #ff00ff;
+    transform: scale(1.05);
+}
+.cta {
+    margin: 10px;
+}
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+.light footer {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+@media (max-width: 768px) {
+    .container { padding: 0 10px; }
+    nav ul { flex-direction: column; }
+    .profile-photo { width: 150px; height: 150px; }
+    .projects { grid-template-columns: 1fr; }
+    .project img { width: 100%; }
+}
+@media (prefers-contrast: high) {
+    .neon { text-shadow: none; color: #fff; }
+    .light .neon { color: #000; }
+}
