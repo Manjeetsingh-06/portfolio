@@ -1,18 +1,16 @@
-
 const toggle = document.getElementById('theme-toggle');
 toggle.addEventListener('click', () => {
     document.body.classList.toggle('light');
     toggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
-    console.log('Theme toggled:', document.body.classList.contains('light') ? 'Light' : 'Dark'); 
+    console.log('Theme toggled:', document.body.classList.contains('light') ? 'Light' : 'Dark');
 });
 
-// Project Animations
-window.addEventListener('load', () => {
-    document.querySelectorAll('.project').forEach(project => {
-        project.style.animationPlayState = 'running';
-    });
+// Nav toggle for mobile
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
 });
-
 
 let userBehavior = 'general';
 window.addEventListener('scroll', () => {
