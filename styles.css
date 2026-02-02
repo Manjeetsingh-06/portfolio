@@ -52,7 +52,7 @@ p, ul {
 }
 
 .bg-image {
-    background: url('profile.jpeg') no-repeat center center/cover;
+    background: url('image.png') no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -156,7 +156,7 @@ nav {
     width: clamp(150px, 20vw, 200px);
     height: clamp(150px, 20vw, 200px);
     border-radius: 50%;
-    background: url('profile.jpeg') no-repeat center center/cover;
+    background: url('image.png') no-repeat center center/cover;
     margin: 0 auto 20px auto;
     position: relative;
     transition: transform 0.3s;
