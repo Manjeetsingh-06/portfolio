@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark">
-    <button id="theme-toggle">🌙</button>
+    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     <nav>
-        <ul>
+        <button id="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+        <ul id="nav-menu">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -20,24 +21,23 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-<hr>
+    <hr>
     <section id="hero" class="fade-in">
         <video autoplay muted loop class="bg-video">
             <source src="hero-bg.mp4" type="video/mp4">
         </video>
         <div class="container">
-            <div img href="profile.jpeg" class="profile-photo" tabindex="0" aria-label="Profile photo of Manjeet Singh"></div> 
+            <div class="profile-photo" tabindex="0" aria-label="Profile photo of Manjeet Singh"></div>
             <h1 class="neon">Manjeet Singh</h1>
             <p>BCA Student | Passionate about Technology and Computer Applications 💻</p>
             <div class="links">
-                <a href="https://www.linkedin.com/in/manjeet-singh-8a35a9328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">🔗 LinkedIn</a>
-                <a href="https://github.com/Manjeetsingh-06" target="_blank">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/manjeet-singh-8a35a9328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">🔗 LinkedIn</a>
+                <a href="https://github.com/Manjeetsingh-06" target="_blank" rel="noopener">💻 GitHub</a>
             </div>
             <a href="manjeet resume.pdf" class="btn cta" download>Download Resume 📄</a>
         </div>
     </section>
     <hr>
-
     <section id="about" class="fade-in">
         <div class="bg-image"></div>
         <div class="container">
@@ -52,7 +52,7 @@
             </ul>
         </div>
     </section>
-<hr>
+    <hr>
     <section id="skills" class="fade-in">
         <div class="bg-image"></div>
         <div class="container">
@@ -74,39 +74,34 @@
                 <li>Quick learner</li>
             </ul>
             <h3>Technology and Language</h3>
-            <p><strong>Tools & Software Known:</strong> 
+            <p><strong>Tools & Software Known:</strong></p>
             <ul>
                 <li>IDE/Editors: IntelliJ IDEA, VS Code.</li>
                 <li>Version Control: Git, GitHub.</li>
                 <li>Office Tools: MS Word, MS Excel, MS PowerPoint.</li>
-               
             </ul>
-            </p>
-            
         </div>
     </section>
     <hr>
-
     <section id="projects" class="fade-in">
-    <div class="bg-image"></div>
-    <div class="container">
-        <h2 class="neon">Projects & Academic Experience</h2>
-        <div class="projects">
-            <div class="project" data-category="java">
-                <img src="Student-Management-System.jpeg" alt="Student Management System" loading="lazy">
-                <h3>Student Management System</h3>
-                <p>Developed a Java console based application to manage student records. Features include add, update, delete, and view student details. Used basic file handling/database concepts.</p>
-            </div>
-            <div class="project" data-category="java">
-                <img src="Atm.jpeg" alt="ATM Management System" loading="lazy">
-                <h3>ATM Management System</h3>
-                <p>Designed a Java console based application to simulate ATM operations. Implemented functions like balance inquiry, deposit, and withdrawal. Focused on core Java concepts and logical implementation.</p>
+        <div class="bg-image"></div>
+        <div class="container">
+            <h2 class="neon">Projects & Academic Experience</h2>
+            <div class="projects">
+                <div class="project" data-category="java">
+                    <img src="Student-Management-System.jpeg" alt="Student Management System" loading="lazy">
+                    <h3>Student Management System</h3>
+                    <p>Developed a Java console based application to manage student records. Features include add, update, delete, and view student details. Used basic file handling/database concepts.</p>
+                </div>
+                <div class="project" data-category="java">
+                    <img src="Atm.jpeg" alt="ATM Management System" loading="lazy">
+                    <h3>ATM Management System</h3>
+                    <p>Designed a Java console based application to simulate ATM operations. Implemented functions like balance inquiry, deposit, and withdrawal. Focused on core Java concepts and logical implementation.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<hr>
-
+    </section>
+    <hr>
     <section id="training" class="fade-in">
         <div class="bg-image"></div>
         <div class="container">
@@ -121,8 +116,7 @@
             </ul>
         </div>
     </section>
-    
-<hr>
+    <hr>
     <section id="contact" class="fade-in">
         <div class="bg-image"></div>
         <div class="container">
@@ -132,11 +126,10 @@
             <p><strong>Email:</strong> <a href="mailto:manjeetsinghofficial.06@gmail.com">manjeetsinghofficial.06@gmail.com</a></p>
         </div>
     </section>
-<hr>
+    <hr>
     <footer>
         <p>&copy; 2026 Manjeet Singh. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
